@@ -1,0 +1,39 @@
+nhom_bao_cao,chi_tieu,so_luong,gia_tri,ghi_chu
+chat_luong_du_lieu,Năm học,0,0.0,Dòng thiếu khóa bị loại; khóa trùng giữ bản ghi đầu tiên.
+chat_luong_du_lieu,Học kỳ,0,0.0,Dòng thiếu khóa bị loại; khóa trùng giữ bản ghi đầu tiên.
+chat_luong_du_lieu,Mã môn,0,0.0,Dòng thiếu khóa bị loại; khóa trùng giữ bản ghi đầu tiên.
+chat_luong_du_lieu,Nhóm môn,0,0.0,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Số TC,0,0.0,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Là đồ án/thực tập/khóa luận,0,0.0,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Lớp mang mã EP,0,0.0,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Mã lớp học phần,0,0.0,Dòng thiếu khóa bị loại; khóa trùng giữ bản ghi đầu tiên.
+chat_luong_du_lieu,Sĩ số lớp (trong dữ liệu),0,0.0,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Mã SV,0,0.0,Dòng thiếu khóa bị loại; khóa trùng giữ bản ghi đầu tiên.
+chat_luong_du_lieu,Khóa SV,42,0.11,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,Khoa của SV,36,0.094,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,CC,4565,11.906,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị."
+chat_luong_du_lieu,KTTX1,5630,14.684,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị."
+chat_luong_du_lieu,KTTX2,37772,98.513,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị. Cột gốc giữ nguyên; ở lớp không có TX2, TX1 được dùng thay lần 2 khi tính điểm quá trình."
+chat_luong_du_lieu,KTTX (TB),5630,14.684,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị."
+chat_luong_du_lieu,Thi,2824,7.365,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị."
+chat_luong_du_lieu,Điểm HP (thang 10),1019,2.658,"Điểm ngoài [0,10] chuyển thành thiếu; không tự điền giá trị."
+chat_luong_du_lieu,"Cơ cấu trọng số suy ra (CC/KTTX/Thi, %)",13739,35.833,Giữ nguyên; feature tổng hợp bỏ qua giá trị thiếu.
+chat_luong_du_lieu,KTTX2_su_dung / diem_qua_trinh,5254,14.077,"Trong lớp không có TX2: dùng TX1 cho cả hai lượt, điểm quá trình=(TX1+TX1)/2=TX1. Trong lớp có TX2: dùng KTTX(TB), tương đương (TX1+TX2)/2 khi có đủ điểm."
+chat_luong_du_lieu,loai_lop,0,0.0,"Phân thành EP, He_thuong, Do_an_thuc_tap_khoa_luan; ưu tiên nhóm đồ án nếu cờ đồ án là Có."
+chat_luong_du_lieu,Dòng thiếu khóa,0,0.0,Đã loại dòng thiếu khóa định danh.
+chat_luong_du_lieu,Dòng trùng khóa ghi danh,0,0.0,"Đã loại bản ghi trùng theo năm học, học kỳ, môn, lớp học phần, sinh viên."
+chat_luong_du_lieu,Dòng trùng hoàn toàn,0,0.0,Giữ bản ghi xuất hiện đầu tiên; loại các dòng giống toàn bộ cột.
+chat_luong_du_lieu,"Dòng có điểm ngoài [0,10] hoặc không phải số",0,0.0,Loại toàn bộ dòng nếu có ít nhất một điểm sai miền hoặc không chuyển được sang số.
+chat_luong_du_lieu,Dòng thiếu Điểm HP,1019,2.658,Loại khỏi bảng điểm sạch và dữ liệu có nhãn; số thiếu ban đầu vẫn được ghi trong báo cáo.
+chat_luong_du_lieu,Số lớp dưới 15 sinh viên,71,8.096,Gắn cờ mẫu nhỏ; không tự loại lớp.
+chat_luong_du_lieu,Lớp sai lệch sĩ số ghi nhận,0,0.0,Loại 0 dòng thuộc lớp có sĩ số ghi nhận không khớp số mã SV duy nhất trong file; không loại lớp chỉ vì sĩ số nhỏ.
+chat_luong_du_lieu,Số lớp thiếu trên 30% dữ liệu điểm,184,20.981,"Tỷ lệ thiếu tính trên ô điểm CC, KTTX1, KTTX(TB), Thi và Điểm HP; gắn cờ, không tự loại lớp."
+chat_luong_du_lieu,Điểm không hợp lệ: CC,0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+chat_luong_du_lieu,Điểm không hợp lệ: KTTX1,0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+chat_luong_du_lieu,Điểm không hợp lệ: KTTX2,0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+chat_luong_du_lieu,Điểm không hợp lệ: KTTX (TB),0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+chat_luong_du_lieu,Điểm không hợp lệ: Thi,0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+chat_luong_du_lieu,Điểm không hợp lệ: Điểm HP (thang 10),0,0.0,"Điểm ngoài [0,10] được chuyển thành thiếu."
+kiem_dinh_model,RMSE_Baseline_prior_GPA,5165,1.4938194281502255,ky_test=nam_hoc_2025; MAE=1.0604; R2=0.2893; duoc_chon=False
+kiem_dinh_model,RMSE_LinearRegression,5165,1.4928750397709163,ky_test=nam_hoc_2025; MAE=1.0567; R2=0.2902; duoc_chon=False
+kiem_dinh_model,RMSE_RandomForest,5165,1.46130439636664,ky_test=nam_hoc_2025; MAE=1.0032; R2=0.3199; duoc_chon=True

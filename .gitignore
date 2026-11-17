@@ -4,9 +4,10 @@ __pycache__/
 **/__pycache__/
 *.py[cod]
 
-# Student-level raw inputs and generated CSVs may contain sensitive academic data.
-data/raw/
-data/processed/*.csv
-
 # Temporary report charts are reproducible from the processed CSVs.
 deliverables/figures/
+
+# Keep presentation deliverables local; publish source and data only.
+deliverables/*.pdf
+deliverables/*.mp4
+deliverables/*.docx

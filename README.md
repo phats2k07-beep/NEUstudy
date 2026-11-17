@@ -11,7 +11,6 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python process_lop_analysis.py
-python generate_report.py
 uvicorn platform_api:app --host 127.0.0.1 --port 8000
 ```
 
@@ -23,7 +22,6 @@ Trong workspace hiện tại, virtualenv đã được cấu hình ở thư mụ
 
 ```bash
 ../.venv/bin/python process_lop_analysis.py
-../.venv/bin/python generate_report.py
 ../.venv/bin/uvicorn platform_api:app --host 127.0.0.1 --port 8000
 ```
 
@@ -42,7 +40,7 @@ curl "http://127.0.0.1:8000/api/students?level=Advanced"
 
 Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `results.students` để truy vấn tiếp sau khi xử lý. Nhãn sàng lọc lớp nằm ở `Nhan_bat_thuong` trong `/api/classes`; phân loại TCI nằm ở `Phan_cap` trong `/api/students`. API có `GET /api/health`, `/api/summary`, `/api/classes`, `/api/students`, `/api/timetable/summary`, và `/api/exports/{filename}`. Swagger UI nằm ở `/docs`.
 
-Mã nguồn được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public. Dữ liệu điểm/sinh viên là dữ liệu nhạy cảm, không đưa các file CSV cá nhân lên repository public.
+Mã nguồn và bộ dữ liệu có mã sinh viên đã mã hóa được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public. PDF và video demo là deliverable riêng, giữ local và không đưa lên repository.
 
 ## Đầu ra chính
 
@@ -53,7 +51,7 @@ Mã nguồn được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUst
 | `data/processed/adjusted_scores.csv` | Điểm gốc, điểm chữ và GPA hệ 4 gốc/điều chỉnh, `Adjusted_Score`, alpha và cờ review theo sinh viên-môn. |
 | `data/processed/student_features.csv` | Một dòng mỗi sinh viên: GPA gốc, Normalized GPA, TCI, phân cấp và giải thích. |
 | `data/processed/bao_cao_clean_data.csv` | Báo cáo chất lượng và metric kiểm định mô hình theo thời gian. |
-| `deliverables/NEU_Academic_Analytics_Technical_Report.pdf` | Báo cáo kỹ thuật có biểu đồ và phụ lục kê khai AI. |
+| `deliverables/NEU_Academic_Analytics_Technical_Report.pdf` | Báo cáo kỹ thuật hiện có tại máy chạy dự án; không được commit lên GitHub. |
 
 ## Phương pháp và giới hạn dữ liệu
 
@@ -82,15 +80,6 @@ Mã nguồn được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUst
 - Quy đổi GPA dùng đúng bảng điểm chữ ở trên. Nhóm cần đối chiếu lần cuối với quy chế đào tạo chính thức trước khi áp dụng vào quyết định học vụ.
 - Dashboard mặc định chỉ bind `127.0.0.1`. Trước khi triển khai mạng, cần xác thực, phân quyền, audit log, mã hóa và chính sách lưu trữ dữ liệu sinh viên.
 - Phụ lục PDF kê khai GitHub Copilot trong VS Code đã hỗ trợ phát triển. Phiên làm việc không cung cấp tên backend model; nhóm cần bổ sung tên model hiển thị trong VS Code nếu thể lệ yêu cầu trước khi nộp chính thức.
-
-## Tái tạo báo cáo
-
-```bash
-python process_lop_analysis.py
-python generate_report.py
-```
-
-PDF được tạo tối đa 15 trang; số liệu và biểu đồ lấy từ CSV mới nhất trong `data/processed`.
 
 ## Kiểm tra
 
