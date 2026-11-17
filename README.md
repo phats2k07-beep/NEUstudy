@@ -54,6 +54,8 @@ Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `resu
 | `data/processed/student_features.csv` | Một dòng mỗi sinh viên: GPA gốc, Normalized GPA, TCI, phân cấp và giải thích. |
 | `data/processed/bao_cao_clean_data.csv` | Báo cáo chất lượng và metric kiểm định mô hình theo thời gian. |
 | `deliverables/NEU_Academic_Analytics_Technical_Report.pdf` | Báo cáo kỹ thuật có biểu đồ và phụ lục kê khai AI. |
+| `deliverables/NEU_Academic_Analytics_Technical_Report.docx` | Bản DOCX có thể chỉnh sửa của báo cáo kỹ thuật. |
+| `deliverables/NEU_Academic_Analytics_Demo.mp4` | Video walkthrough hệ thống và kết quả phân tích tổng hợp. |
 
 ## Phương pháp và giới hạn dữ liệu
 

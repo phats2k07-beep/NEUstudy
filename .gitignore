@@ -10,6 +10,3 @@ data/processed/*.csv
 
 # Temporary report charts are reproducible from the processed CSVs.
 deliverables/figures/
-deliverables/*.pdf
-deliverables/*.docx
-deliverables/*.mp4
