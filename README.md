@@ -42,7 +42,7 @@ curl "http://127.0.0.1:8000/api/students?level=Advanced"
 
 Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `results.students` để truy vấn tiếp sau khi xử lý. Nhãn sàng lọc lớp nằm ở `Nhan_bat_thuong` trong `/api/classes`; phân loại TCI nằm ở `Phan_cap` trong `/api/students`. API có `GET /api/health`, `/api/summary`, `/api/classes`, `/api/students`, `/api/timetable/summary`, và `/api/exports/{filename}`. Swagger UI nằm ở `/docs`.
 
-Để chia sẻ demo qua Internet, cần triển khai API trên một hosting HTTPS và cập nhật URL public vào hồ sơ nộp bài. Workspace này chưa có Git remote hoặc URL deployment; không dùng link localhost làm link public. Dữ liệu điểm/sinh viên là dữ liệu nhạy cảm, chỉ triển khai public sau khi bổ sung xác thực, phân quyền và chính sách lưu trữ phù hợp.
+Mã nguồn được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public. Dữ liệu điểm/sinh viên là dữ liệu nhạy cảm, không đưa các file CSV cá nhân lên repository public.
 
 ## Đầu ra chính
 
@@ -54,8 +54,6 @@ Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `resu
 | `data/processed/student_features.csv` | Một dòng mỗi sinh viên: GPA gốc, Normalized GPA, TCI, phân cấp và giải thích. |
 | `data/processed/bao_cao_clean_data.csv` | Báo cáo chất lượng và metric kiểm định mô hình theo thời gian. |
 | `deliverables/NEU_Academic_Analytics_Technical_Report.pdf` | Báo cáo kỹ thuật có biểu đồ và phụ lục kê khai AI. |
-| `deliverables/NEU_Academic_Analytics_Technical_Report.docx` | Bản DOCX có thể chỉnh sửa của báo cáo kỹ thuật. |
-| `deliverables/NEU_Academic_Analytics_Demo.mp4` | Video walkthrough hệ thống và kết quả phân tích tổng hợp. |
 
 ## Phương pháp và giới hạn dữ liệu
 
@@ -100,6 +98,3 @@ PDF được tạo tối đa 15 trang; số liệu và biểu đồ lấy từ C
 python -m unittest discover -s tests -v
 ```
 
-## Kịch bản demo
-
-Xem `deliverables/demo_video_script.md` để có timeline 3–5 phút và lời dẫn. Dùng dashboard ở localhost; không đưa mã SV thật vào video công khai.
