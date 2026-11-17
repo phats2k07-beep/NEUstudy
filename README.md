@@ -35,6 +35,16 @@ Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `resu
 
 Mã nguồn và bộ dữ liệu có mã sinh viên đã mã hóa được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public. PDF và video demo là deliverable riêng, giữ local và không đưa lên repository.
 
+## Video demo
+
+Tạo video 3 phút 30 giây từ dữ liệu đã xử lý:
+
+```bash
+python make_demo_video.py
+```
+
+Cần cài `ffmpeg` trên hệ điều hành. Video được lưu tại `deliverables/NEU_Academic_Analytics_Demo.mp4` và bị loại khỏi Git; ví dụ sinh viên trong video dùng nhãn ẩn danh.
+
 ## Đầu ra chính
 
 | File | Nội dung |
