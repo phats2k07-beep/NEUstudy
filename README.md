@@ -16,8 +16,6 @@ uvicorn platform_api:app --host 127.0.0.1 --port 8000
 
 Mở dashboard tại `http://127.0.0.1:8000`; tài liệu API tại `http://127.0.0.1:8000/docs`.
 
-Demo chạy local (sau khi khởi động API): [Dashboard](http://127.0.0.1:8000/) · [Swagger API](http://127.0.0.1:8000/docs) · [Health check](http://127.0.0.1:8000/api/health). Đây là link trên máy đang chạy ứng dụng, không phải deployment public.
-
 ## Nạp dữ liệu qua API
 
 `POST /api/analyze` nhận `multipart/form-data` với trường `file` là CSV. File cần có tối thiểu các cột khóa và `Điểm HP (thang 10)`; pipeline kiểm tra các cột còn lại khi xử lý. Upload giới hạn 50 MB. Kết quả upload được tạo trong thư mục tạm, không ghi đè dữ liệu nguồn hay các CSV gốc trong `data/processed`.
@@ -33,17 +31,7 @@ curl "http://127.0.0.1:8000/api/students?level=Advanced"
 
 Phản hồi `POST /api/analyze` có `results.summary`, `results.classes`, `results.students` để truy vấn tiếp sau khi xử lý. Nhãn sàng lọc lớp nằm ở `Nhan_bat_thuong` trong `/api/classes`; phân loại TCI nằm ở `Phan_cap` trong `/api/students`. API có `GET /api/health`, `/api/summary`, `/api/classes`, `/api/students`, `/api/timetable/summary`, và `/api/exports/{filename}`. Swagger UI nằm ở `/docs`.
 
-Mã nguồn và bộ dữ liệu có mã sinh viên đã mã hóa được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public. PDF và video demo là deliverable riêng, giữ local và không đưa lên repository.
-
-## Video demo
-
-Tạo video 3 phút 30 giây từ dữ liệu đã xử lý:
-
-```bash
-python make_demo_video.py
-```
-
-Cần cài `ffmpeg` trên hệ điều hành. Video được lưu tại `deliverables/NEU_Academic_Analytics_Demo.mp4` và bị loại khỏi Git; ví dụ sinh viên trong video dùng nhãn ẩn danh.
+Mã nguồn và bộ dữ liệu có mã sinh viên đã mã hóa được lưu tại [GitHub](https://github.com/phats2k07-beep/NEUstudy). Dashboard/API chạy local; chưa có URL deployment public.
 
 ## Đầu ra chính
 
