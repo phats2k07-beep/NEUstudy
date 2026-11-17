@@ -18,13 +18,6 @@ Mở dashboard tại `http://127.0.0.1:8000`; tài liệu API tại `http://127.
 
 Demo chạy local (sau khi khởi động API): [Dashboard](http://127.0.0.1:8000/) · [Swagger API](http://127.0.0.1:8000/docs) · [Health check](http://127.0.0.1:8000/api/health). Đây là link trên máy đang chạy ứng dụng, không phải deployment public.
 
-Trong workspace hiện tại, virtualenv đã được cấu hình ở thư mục cha `../.venv`; có thể dùng trực tiếp lệnh:
-
-```bash
-../.venv/bin/python process_lop_analysis.py
-../.venv/bin/uvicorn platform_api:app --host 127.0.0.1 --port 8000
-```
-
 ## Nạp dữ liệu qua API
 
 `POST /api/analyze` nhận `multipart/form-data` với trường `file` là CSV. File cần có tối thiểu các cột khóa và `Điểm HP (thang 10)`; pipeline kiểm tra các cột còn lại khi xử lý. Upload giới hạn 50 MB. Kết quả upload được tạo trong thư mục tạm, không ghi đè dữ liệu nguồn hay các CSV gốc trong `data/processed`.
